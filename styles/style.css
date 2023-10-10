@@ -281,16 +281,17 @@ header {
 }
 
 .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 355px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 0;
   padding: 0 50px 90px 50px;
   background-color: #fff;
-  color: #000;
 }
 
 .footer__address {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   max-width: 237px;
   font-weight: normal;
   font-style: normal;
@@ -304,12 +305,11 @@ header {
   font-style: normal;
   line-height: normal;
   text-align: center;
+  justify-self: center;
 }
 
 .footer__menu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  text-wrap: nowrap;
   list-style: none;
 }
 
@@ -324,12 +324,15 @@ header {
 }
 
 .footer__social-list {
+  justify-self: end;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 48px;
-  max-width: 240px;
-  max-height: 48px;
-  text-align: end;
   list-style: none;
+}
+
+.footer__social-icon {
+  width: 48px;
+  height: 48px;
 }
