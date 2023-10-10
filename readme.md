@@ -1,1 +1,1 @@
-git@github.com:Khimichek/ono-tebe-nado.git
+https://github.com/Khimichek/ono-tebe-nado.git
