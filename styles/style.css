@@ -10,11 +10,12 @@ header {
 .header__links-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   gap: 32px;
+  min-width: 388px;
   font-weight: normal;
   font-style: normal;
   list-style: circle;
-  text-wrap: nowrap;
 }
 
 .header__links-list-item {
@@ -43,20 +44,20 @@ header {
   justify-self: end;
   max-width: 237px;
   font-weight: normal;
-  font-style: normal;
   font-size: 18px;
+  font-style: normal;
   line-height: 1.35;
 }
 
 .cover {
   position: relative;
   z-index: 0;
-  height: 757px;
+  min-height: 757px;
   padding: 0 50px 0 50px;
+  color: #fff;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
 }
 
 .overlay {
@@ -112,6 +113,7 @@ header {
 .cover__description {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: end;
   gap: 78px;
 }
@@ -124,13 +126,13 @@ header {
   text-align: center;
   text-transform: uppercase;
   word-spacing: 18px;
-  text-wrap: nowrap;
+  /*text-wrap: nowrap;*/
 }
 
 .bet-button {
   border: 1px solid #fff;
-  color: #fff;
   padding: 12px 32px;
+  color: #fff;
   font-size: 22px;
   text-align: center;
   text-decoration: none;
@@ -154,11 +156,17 @@ header {
 .lots__card-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 25px;
   padding: 27px 0 30px 0;
   list-style: none;
+}
+
+.lots__card-list-item {
+  flex-grow: 1;
+  flex-basis: 430px;
+  width: 100%;
 }
 
 .card {
@@ -173,9 +181,6 @@ header {
 .card-link {
   display: block;
   text-decoration: none;
-  flex-grow: 1;
-  flex-basis: 430px;
-  width: 100%;
 }
 
 .card__title {
@@ -194,11 +199,11 @@ header {
 }
 
 .card_type_film {
+  position: relative;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  position: relative;
-  z-index: 0;
   background-image: url(../images/card-lot-01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -231,8 +236,8 @@ header {
 
 .about {
   padding: 183px 50px 180px 50px;
-  background-color: #fff;
   color: #000;
+  background-color: #fff;
 }
 
 .about__column {
@@ -294,22 +299,21 @@ header {
   flex-wrap: nowrap;
   max-width: 237px;
   font-weight: normal;
-  font-style: normal;
   font-size: 18px;
+  font-style: normal;
   line-height: 1.35;
 }
 
 .footer__menu {
+  justify-self: center;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: normal;
   text-align: center;
-  justify-self: center;
 }
 
 .footer__menu-list {
-  text-wrap: nowrap;
   list-style: none;
 }
 
@@ -324,10 +328,10 @@ header {
 }
 
 .footer__social-list {
-  justify-self: end;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-self: end;
   gap: 48px;
   list-style: none;
 }
